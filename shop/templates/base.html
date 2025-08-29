@@ -10,6 +10,9 @@
             background: #e8f5e9;
             color: #1b5e20;
             margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .navbar {
@@ -58,10 +61,10 @@
         <span style="flex:1"></span>
         <a href="/admin/" style="background:#2e7d32;padding:6px 16px;border-radius:4px;">Admin</a>
     </div>
-    <div class="container">
+    <div class="container" style="flex:1;">
         {% block content %}{% endblock %}
     </div>
-    <footer style="background:#388e3c;color:#fff;padding:24px 0;text-align:center;margin-top:40px;">
+    <footer style="background:#388e3c;color:#fff;padding:24px 0;text-align:center;margin-top:40px;width:100%;">
         <div style="max-width:900px;margin:auto;">
             <p style="margin:0;font-size:1.1em;font-weight:500;">&copy; {{ now|default:2025 }} Carrylux. All rights
                 reserved.</p>
