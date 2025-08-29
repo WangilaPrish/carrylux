@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Product List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        .product h2 {
+            margin: 0 0 8px 0;
+        }
+
+        .product .price {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Product List</h1>
+    {% for product in products %}
+    <div class="product">
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p class="price">${{ product.price }}</p>
+        <small>Added: {{ product.created_at }}</small>
+    </div>
+    {% empty %}
+    <p>No products available.</p>
+    {% endfor %}
+</body>
+
+</html>
