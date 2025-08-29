@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'carrylux.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'carrylux_db',  # Change to your database name
-        'USER': 'root',         # Change to your MySQL username
-        'PASSWORD': 'your_mysql_password', # Change to your MySQL password
-        'HOST': 'localhost',    # Or your MySQL server address
-        'PORT': '3306',         # Default MySQL port
+        'NAME': 'carrylux_DB',
+        'USER': 'root',
+        'PASSWORD': 'WangilaP@0911',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
