@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}Carrylux Shop{% endblock %}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e8f5e9;
+            color: #1b5e20;
+            margin: 0;
+        }
+
+        .navbar {
+            background: #388e3c;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 24px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #c8e6c9;
+        }
+
+        .navbar .brand {
+            font-size: 1.3em;
+            margin-right: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 32px auto;
+            background: #c8e6c9;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(67, 160, 71, 0.08);
+            padding: 24px;
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <div class="navbar">
+        <span class="brand">Carrylux</span>
+        <a href="/shop/products/">Products</a>
+        <a href="/admin/">Admin</a>
+    </div>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>
