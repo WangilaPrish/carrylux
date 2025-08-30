@@ -23,5 +23,6 @@ from shop import views
 urlpatterns = [
     path('', views.landing, name='landing'),
     path('admin/', admin.site.urls),
+    path('about/', views.about, name='about'),
     path('shop/', include('shop.urls')),
 ]
