@@ -19,6 +19,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from shop import views
+from shop.api import ProductViewSet
+from rest_framework import routers
+
+router = routers.DefaultRouter()
+router.register(r'api/products', ProductViewSet)
 
 urlpatterns = [
     path('', views.landing, name='landing'),
@@ -26,4 +31,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('shop/', include('shop.urls')),
     path('categories/', views.categories, name='categories'),
+    path('', include(router.urls)),
 ]
