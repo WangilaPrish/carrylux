@@ -30,6 +30,17 @@ def about(request):
 
 def product_list(request):
 	products = Product.objects.all()
+	if not products:
+		shopify_products = fetch_shopify_products()
+		# Convert Shopify products to a format compatible with the template
+		products = [
+			type('ShopifyProduct', (), {
+				'name': p.get('title', ''),
+				'description': p.get('body_html', ''),
+				'price': p.get('variants', [{}])[0].get('price', ''),
+				'created_at': p.get('created_at', '')
+			}) for p in shopify_products
+		]
 	return render(request, 'shop/product_list.html', {'products': products})
 
 def categories(request):
