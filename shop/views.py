@@ -6,7 +6,7 @@ from .shopify_secrets import SHOPIFY_CLIENT_ID, SHOPIFY_CLIENT_SECRET
 
 def fetch_shopify_products():
 	# Replace with your actual shop name and access token
-	SHOP_NAME = 'your-shop-name'
+	SHOP_NAME = 'carrylux'
 	ACCESS_TOKEN = SHOPIFY_CLIENT_SECRET  # Typically, you need an OAuth token, not just the secret
 	url = f'https://{SHOP_NAME}.myshopify.com/admin/api/2023-04/products.json'
 	headers = {
