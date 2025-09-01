@@ -31,15 +31,19 @@ def about(request):
 def product_list(request):
 	products = Product.objects.all()
 	if not products:
-		shopify_products = fetch_shopify_products()
-		# Convert Shopify products to a format compatible with the template
+		# Hardcoded sample products
+		class HardProduct:
+			def __init__(self, name, description, price, created_at):
+				self.name = name
+				self.description = description
+				self.price = price
+				self.created_at = created_at
+
 		products = [
-			type('ShopifyProduct', (), {
-				'name': p.get('title', ''),
-				'description': p.get('body_html', ''),
-				'price': p.get('variants', [{}])[0].get('price', ''),
-				'created_at': p.get('created_at', '')
-			}) for p in shopify_products
+			HardProduct("Gucci Marmont", "Iconic designer shoulder bag in quilted leather.", 2499.99, "2025-08-01"),
+			HardProduct("Prada Re-Edition", "Trendy nylon mini bag with classic logo.", 1299.00, "2025-08-05"),
+			HardProduct("Louis Vuitton Neverfull", "Spacious tote with signature monogram canvas.", 1899.50, "2025-08-10"),
+			HardProduct("Chanel Classic Flap", "Timeless lambskin bag with gold hardware.", 3999.00, "2025-08-15"),
 		]
 	return render(request, 'shop/product_list.html', {'products': products})
 
