@@ -11,6 +11,7 @@
         width: 100%;
     }
 
+    /* Remove the green box effect by eliminating any parent container with background and max-width */
     .hero-section {
         display: flex;
         flex-wrap: wrap;
@@ -19,13 +20,16 @@
         padding: 64px 32px 32px 32px;
         width: 100%;
         gap: 32px;
-        /* Remove any max-width or margin: auto here */
+        background: none;
+        max-width: none;
+        margin: 0;
+        border-radius: 0;
     }
 
     .hero-content {
         flex: 1 1 400px;
         min-width: 320px;
-        /* Remove max-width to allow full stretch */
+        max-width: none;
     }
 
     .hero-title {
@@ -125,8 +129,7 @@
         width: 100%;
         padding: 0 24px;
         margin: 0 0 40px 0;
-        /* Remove left/right margin */
-        /* Remove max-width and margin: auto */
+        max-width: none;
     }
 
     .featured-card {
@@ -185,7 +188,7 @@
         width: 100%;
         padding: 0 24px;
         margin: 0 0 56px 0;
-        /* Remove left/right margin and max-width */
+        max-width: none;
     }
 
     .testimonial-card {
