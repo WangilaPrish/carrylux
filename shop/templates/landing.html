@@ -19,12 +19,13 @@
         padding: 64px 32px 32px 32px;
         width: 100%;
         gap: 32px;
+        /* Remove any max-width or margin: auto here */
     }
 
     .hero-content {
         flex: 1 1 400px;
         min-width: 320px;
-        max-width: 540px;
+        /* Remove max-width to allow full stretch */
     }
 
     .hero-title {
@@ -121,8 +122,11 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 28px;
-        margin: 0 40px;
+        width: 100%;
         padding: 0 24px;
+        margin: 0 0 40px 0;
+        /* Remove left/right margin */
+        /* Remove max-width and margin: auto */
     }
 
     .featured-card {
@@ -178,9 +182,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 28px;
-        max-width: 1200px;
-        margin: 0 auto 56px auto;
+        width: 100%;
         padding: 0 24px;
+        margin: 0 0 56px 0;
+        /* Remove left/right margin and max-width */
     }
 
     .testimonial-card {
