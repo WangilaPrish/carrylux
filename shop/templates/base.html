@@ -73,6 +73,52 @@
             box-shadow: 0 2px 6px rgba(67, 160, 71, 0.08);
             padding: 24px;
         }
+
+        .footer-social {
+            display: flex;
+            gap: 18px;
+            margin-top: 8px;
+        }
+
+        .footer-social a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            box-shadow: 0 4px 16px rgba(67, 160, 71, 0.18);
+            transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+            filter: brightness(0.95);
+            background: #fff;
+        }
+
+        .footer-social a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 24px rgba(67, 160, 71, 0.25);
+            filter: brightness(1.1);
+        }
+
+        .footer-social .facebook {
+            background: linear-gradient(135deg, #3b5998, #8b9dc3);
+            color: #fff;
+        }
+
+        .footer-social .twitter {
+            background: linear-gradient(135deg, #1da1f2, #0e71c8);
+            color: #fff;
+        }
+
+        .footer-social .instagram {
+            background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+            color: #fff;
+        }
+
+        .footer-social .whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: #fff;
+        }
     </style>
     {% block extra_head %}{% endblock %}
 </head>
@@ -128,23 +174,11 @@
             <div
                 style="flex:1;min-width:220px;text-align:right;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;">
                 <h2 style="color:#fff;font-size:0.98em;font-weight:700;margin-bottom:18px;">Connect With Us</h2>
-                <div style="display:flex;gap:16px;">
-                    <a href="#" title="Facebook"
-                        style="background:linear-gradient(135deg,#3b5998,#8b9dc3);color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:1.2em;box-shadow:0 2px 8px rgba(67,160,71,0.10);transition:transform 0.2s,box-shadow 0.2s;outline:none;border:none;">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" title="Twitter"
-                        style="background:linear-gradient(135deg,#1da1f2,#0e71c8);color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:1.2em;box-shadow:0 2px 8px rgba(67,160,71,0.10);transition:transform 0.2s,box-shadow 0.2s;outline:none;border:none;">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#" title="Instagram"
-                        style="background:radial-gradient(circle at 30% 110%,#fdf497 0%,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285AEB 90%);color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:1.2em;box-shadow:0 2px 8px rgba(67,160,71,0.10);transition:transform 0.2s,box-shadow 0.2s;outline:none;border:none;">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" title="WhatsApp"
-                        style="background:linear-gradient(135deg,#25d366,#128c7e);color:#fff;border-radius:50%;width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:1.2em;box-shadow:0 2px 8px rgba(67,160,71,0.10);transition:transform 0.2s,box-shadow 0.2s;outline:none;border:none;">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                <div class="footer-social">
+                    <a href="#" class="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="whatsapp" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
                 <p style="color:#c8e6c9;font-size:0.92em;margin-top:18px;text-align:right;">
                     <span style="display:inline-block;margin-bottom:6px;">
